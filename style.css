@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+button:hover{
+    cursor: pointer;
+}
+button{
+    border: none;
+    outline: none;
+}
+
+:root{
+    --mainColor:#dde5f4;
+    --purple1:#3d4785;
+    --containerColor:#f1f7fe;
+    --fontSize: 14px;
+    --formInputsWidth:80%;
+}
+
+input{
+    color: gray;
+}
+
+@media only screen and (max-width:500px) {
+    .container{
+        height: 90vh !important;
+        width: 90vw !important;
+    }
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--mainColor);
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: 300px;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(to bottom,var(--containerColor) 80%, rgb(255, 255, 255) 85%);
+}
+.container .login,.signup{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.hideLogin{
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+.disLogin{
+    transform: translateY(0%);
+    transition: all 1s;
+}
+
+.hideSignup{
+    transform: translateY(100%);
+    transition: all 1s;
+}
+.disSignUp{
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+
+.logTransition{
+    transform: translateY(-100%);
+    transition:all 2s;
+}
+
+.signupTransition{
+    transform: translateY(50%);
+    transition:all 2s;
+}
+
+
+.container .logo{
+    width: 100px;
+    height: 100px;
+    background-color: var(--purple1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.container .form{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20%;
+}
+
+
+.form i{
+    color: gray;
+}
+
+.form .box{
+    width:var(--formInputsWidth);
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.box .input .textInput{
+    border: none;
+    outline: none;
+}
+.box .boxTitle{
+    font-size: 12px;
+    margin: 5px 0;
+    color: rgba(6, 6, 6, 0.771);
+    font-weight: 600;
+    
+}
+.box #passwordBox{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0px;
+}
+
+#passwordBox .right button{
+    border: none;
+    outline: none;
+    background-color:transparent;
+}
+
+.form #formBTN{
+    background-color: var(--purple1);
+    width: var(--formInputsWidth);
+
+    text-align: center;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+.container .otherLinks{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.otherLinks a,button{
+    color: gray;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.signup .form{
+    height: 350px !important;
+}
